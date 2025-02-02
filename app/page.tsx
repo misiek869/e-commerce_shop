@@ -1,7 +1,14 @@
-import React from 'react'
+import { Button } from '@/components/ui/button'
 
 const HomePage = () => {
-	return <div>Home Page</div>
+	return (
+		<>
+			<div>Home Page</div>
+			<Button variant='outline' size={'lg'} className='capitalize'>
+				click me
+			</Button>
+		</>
+	)
 }
 
 export default HomePage
