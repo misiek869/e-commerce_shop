@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NavbarSearch = () => {
-	return <div>NavbarSearch</div>
+	return <>NavbarSearch</>
 }
 
 export default NavbarSearch
