@@ -3,7 +3,7 @@ import Container from '../global/Container'
 import Logo from './Logo'
 import NavbarSearch from './NavbarSearch'
 import CartButton from './CartButton'
-import DarkMode from './DarkMode'
+import ModeToggle from './DarkMode'
 import LinksDropdown from './LinksDropdown'
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
 				<NavbarSearch />
 				<div className='flex gap-4 items-center'>
 					<CartButton />
-					<DarkMode />
+					<ModeToggle />
 					<LinksDropdown />
 				</div>
 			</Container>
