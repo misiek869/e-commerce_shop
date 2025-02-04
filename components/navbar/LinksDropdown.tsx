@@ -14,7 +14,10 @@ const LinksDropdown = () => {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger>
-				<Button variant={'outline'} className='flex gap-4 max-w-[100px]'>
+				<Button
+					asChild
+					variant={'outline'}
+					className='flex gap-4 max-w-[100px]'>
 					<LuAlignLeft className='w-6 h-6' />
 				</Button>
 			</DropdownMenuTrigger>
