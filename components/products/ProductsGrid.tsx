@@ -3,6 +3,7 @@ import { Product } from '@prisma/client'
 import Link from 'next/link'
 import { Card, CardContent } from '../ui/card'
 import Image from 'next/image'
+import FavoriteToggleButton from './FavoriteToggleButton'
 
 const ProductsGrid = ({ products }: { products: Product[] }) => {
 	return (
@@ -27,9 +28,16 @@ const ProductsGrid = ({ products }: { products: Product[] }) => {
 											priority
 											className='rounded w-full object-cover transform group-hover:scale-110 transition-transform duration-500'></Image>
 									</div>
+									<div className='mt-4 text-center'>
+										<h2 className='text-lg capitalize'>{name}</h2>
+										<p className='text-muted-foreground '>{dollars}</p>
+									</div>
 								</CardContent>
 							</Card>
 						</Link>
+						<div className='absolute top-7 right-7 z-50'>
+							<FavoriteToggleButton productId={productId} />
+						</div>
 					</article>
 				)
 			})}
