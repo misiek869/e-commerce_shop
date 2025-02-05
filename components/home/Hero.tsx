@@ -1,12 +1,6 @@
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
-} from '@/components/ui/carousel'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import HeroCarousel from './HeroCarousel'
 
 const Hero = () => {
 	return (
@@ -25,6 +19,7 @@ const Hero = () => {
 					<Link href={'/products'}>See Our Products</Link>
 				</Button>
 			</div>
+			<HeroCarousel />
 		</section>
 	)
 }
