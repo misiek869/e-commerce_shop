@@ -1,12 +1,11 @@
-import { Button } from '@/components/ui/button'
+import FeaturedProducts from '@/components/home/FeaturedProducts'
+import Hero from '@/components/home/Hero'
 
 const HomePage = () => {
 	return (
 		<>
-			<div>Home Page</div>
-			<Button variant='outline' size={'lg'} className='capitalize'>
-				click me
-			</Button>
+			<Hero />
+			<FeaturedProducts />
 		</>
 	)
 }
