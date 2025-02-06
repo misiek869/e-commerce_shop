@@ -1,5 +1,7 @@
 const url: string = 'https://e-commerce-api-it0a.onrender.com/'
 import db from '@/utils/db'
+import { redirect } from 'next/navigation'
+
 // export const fetchFeaturedProducts = async () => {
 // 	try {
 // 		const response = await fetch(`${url}products?featured=true`)
@@ -49,4 +51,18 @@ export const fetchAllProducts = ({ search = '' }: { search: string }) => {
 			createdAt: 'desc',
 		},
 	})
+}
+
+export const fetchSingleProduct = ({ productId }: { productId: string }) => {
+	const product = db.product.findUnique({
+		where: {
+			id: productId,
+		},
+	})
+
+	if (!product) {
+		return redirect('/')
+	}
+
+	return product
 }
