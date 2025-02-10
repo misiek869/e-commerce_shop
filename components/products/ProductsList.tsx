@@ -16,7 +16,7 @@ const ProductsList = ({ products }: { products: Product[] }) => {
 
 				return (
 					<article key={productId} className='group relative'>
-						<Link href={`product/${productId}`}>
+						<Link href={`products/${productId}`}>
 							<Card className='transform group-hover:shadow-xl transition-shadow duration-700'>
 								<CardContent className='p-4 gap-y-4 grid md:grid-cols-3'>
 									<div className='relative h-64 md:h-48 '>

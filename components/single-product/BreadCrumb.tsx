@@ -22,6 +22,7 @@ const BreadCrumb = ({ name }: { name: string }) => {
 						products
 					</BreadcrumbLink>
 				</BreadcrumbItem>
+				<BreadcrumbSeparator />
 				<BreadcrumbItem>
 					<BreadcrumbPage className='capitalize text-lg'>{name}</BreadcrumbPage>
 				</BreadcrumbItem>

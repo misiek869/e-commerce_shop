@@ -61,7 +61,7 @@ export const fetchSingleProduct = ({ productId }: { productId: string }) => {
 	})
 
 	if (!product) {
-		return redirect('/')
+		redirect('/')
 	}
 
 	return product
