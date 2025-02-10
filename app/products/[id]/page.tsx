@@ -38,7 +38,7 @@ const SingleProductPage = async ({ params }: { params: { id: string } }) => {
 						<FavoriteToggleButton productId={params.id} />
 					</div>
 					<ProductRating productId={params.id} />
-					<h4 className='text-xl mt-2'>{company}</h4>
+					<h4 className='text-xl mt-2 capitalize'>{company}</h4>
 					<p className='mt-3 text-md bg-muted inline-block p-2 rounded-md'>
 						{dollars}
 					</p>
