@@ -1,8 +1,17 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server'
 
 const isPublicRoute = createRouteMatcher(['/', '/products(.*)', '/about'])
+const isAdminRoute = createRouteMatcher(['/admin(.*)'])
 
 export default clerkMiddleware(async (auth, req) => {
+	const id = (await auth()).userId
+	const isAdmin = id === process.env.ADMIN_ID
+
+	if (isAdminRoute(req) && !isAdmin) {
+		return NextResponse.redirect(new URL('/', req.url))
+	}
+
 	if (!isPublicRoute(req)) await auth.protect()
 })
 
