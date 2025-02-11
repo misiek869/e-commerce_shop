@@ -1,3 +1,5 @@
+'use server'
+
 const url: string = 'https://e-commerce-api-it0a.onrender.com/'
 import db from '@/utils/db'
 import { redirect } from 'next/navigation'
