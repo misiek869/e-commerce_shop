@@ -1,7 +1,7 @@
 import React from 'react'
 
-const EditPage = () => {
+const EditProductPage = () => {
 	return <div>EditPage</div>
 }
 
-export default EditPage
+export default EditProductPage
