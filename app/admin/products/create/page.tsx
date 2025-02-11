@@ -8,6 +8,7 @@ import PriceInput from '@/components/form/PriceInput'
 import ImageInput from '@/components/form/ImageInput'
 import TextArea from '@/components/form/TextArea'
 import CheckboxInput from '@/components/form/CheckboxInput'
+import { SubmitButton } from '@/components/form/Buttons'
 
 const CreateProductPage = () => {
 	const name = faker.commerce.productName()
@@ -45,6 +46,7 @@ const CreateProductPage = () => {
 					<div className='mt-6'>
 						<CheckboxInput name='featured' label='featured' />
 					</div>
+					<SubmitButton text='add new product' className='mt-6' />
 				</FormContainer>
 			</div>
 		</section>
