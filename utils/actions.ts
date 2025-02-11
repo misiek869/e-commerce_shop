@@ -41,7 +41,7 @@ export const fetchFeaturedProducts = async () => {
 // 	}
 // }
 
-export const fetchAllProducts = ({ search = '' }: { search: string }) => {
+export const fetchAllProducts = async ({ search = '' }: { search: string }) => {
 	return db.product.findMany({
 		where: {
 			OR: [
@@ -55,7 +55,11 @@ export const fetchAllProducts = ({ search = '' }: { search: string }) => {
 	})
 }
 
-export const fetchSingleProduct = ({ productId }: { productId: string }) => {
+export const fetchSingleProduct = async ({
+	productId,
+}: {
+	productId: string
+}) => {
 	const product = db.product.findUnique({
 		where: {
 			id: productId,
