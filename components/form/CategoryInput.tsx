@@ -15,13 +15,13 @@ const CategoryInput = () => {
 		<div className='mb-2'>
 			<Select name='category'>
 				<SelectTrigger>
-					<SelectValue placeholder='Select a company' />
+					<SelectValue placeholder='Select a category' />
 				</SelectTrigger>
 				<SelectContent>
 					<SelectGroup>
-						<SelectItem value='ikea'>Ikea</SelectItem>
-						<SelectItem value='liddy'>Liddy</SelectItem>
-						<SelectItem value='marcos'>Marcos</SelectItem>
+						<SelectItem value='kitchen'>Kitchen</SelectItem>
+						<SelectItem value='living room'>Living Room</SelectItem>
+						<SelectItem value='bathroom'>Bathroom</SelectItem>
 					</SelectGroup>
 				</SelectContent>
 			</Select>
