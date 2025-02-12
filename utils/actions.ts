@@ -96,6 +96,11 @@ export const createProductAction = async (
 
 	try {
 		const name = formData.get('name') as string
+		const colorsInput = formData.get('color') as string
+		const colors = colorsInput
+			? colorsInput.split(',').map(color => color.trim())
+			: []
+		const category = formData.get('category') as string
 		const company = formData.get('company') as string
 		const price = Number(formData.get('price') as string)
 
@@ -108,6 +113,8 @@ export const createProductAction = async (
 			data: {
 				name,
 				company,
+				colors,
+				category,
 				price,
 				image: '/images/hero1.jpg',
 				description,
