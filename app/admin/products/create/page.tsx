@@ -8,6 +8,8 @@ import PriceInput from '@/components/form/PriceInput'
 import ImageInput from '@/components/form/ImageInput'
 import TextArea from '@/components/form/TextArea'
 import CheckboxInput from '@/components/form/CheckboxInput'
+import CategoryInput from '@/components/form/CategoryInput'
+import ColorInput from '@/components/form/ColorInput'
 import { SubmitButton } from '@/components/form/Buttons'
 
 const CreateProductPage = () => {
@@ -35,6 +37,8 @@ const CreateProductPage = () => {
 							label='company'
 							defaultValue={company}
 						/>
+						<CategoryInput />
+						<ColorInput />
 						<PriceInput />
 						<ImageInput />
 					</div>
