@@ -12,7 +12,7 @@ import {
 const ColorInput = () => {
 	return (
 		<div className='mb-2'>
-			<Select>
+			<Select name='color'>
 				<SelectTrigger>
 					<SelectValue placeholder='Select a color' />
 				</SelectTrigger>

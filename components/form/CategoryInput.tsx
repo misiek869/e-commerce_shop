@@ -13,7 +13,7 @@ import {
 const CategoryInput = () => {
 	return (
 		<div className='mb-2'>
-			<Select>
+			<Select name='category'>
 				<SelectTrigger>
 					<SelectValue placeholder='Select a company' />
 				</SelectTrigger>
